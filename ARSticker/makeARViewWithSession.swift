@@ -22,7 +22,7 @@ func makeARViewWithSession(_ session: ARSession) -> ARView {
 func setupAddedAnchor(_ anchor: ARAnchor, _ stickerImage: UIImage, _ arView: ARView) {
     print("Detected!")
     
-    let texture = try! TextureResource.generate(from: stickerImage.cgImage!, options: .init(semantic: .none))
+    let texture = try! TextureResource.generate(from: stickerImage.cgImage!, options: .init(semantic: .hdrColor))
     
     var material = SimpleMaterial()
     material.color = .init(tint: .white, texture: .init(texture))

@@ -49,8 +49,8 @@ __attribute__((objc_direct_members))
     
     ARReferenceImage *anchorReferenceImage = [[ARReferenceImage alloc] initWithCGImage:_anchorImage.CGImage orientation:kCGImagePropertyOrientationUp physicalWidth:0.5];
     
-    ARWorldTrackingConfiguration *configuration = [ARWorldTrackingConfiguration new];
-    configuration.detectionImages = [NSSet setWithObject:anchorReferenceImage];
+    ARImageTrackingConfiguration *configuration = [ARImageTrackingConfiguration new];
+    configuration.trackingImages = [NSSet setWithObject:anchorReferenceImage];
     [anchorReferenceImage release];
     
     [session runWithConfiguration:configuration];
