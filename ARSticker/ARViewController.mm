@@ -67,9 +67,9 @@ __attribute__((objc_direct_members))
 }
 
 - (void)session:(ARSession *)session didRemoveAnchors:(NSArray<__kindof ARAnchor *> *)anchors {
-//    for (ARAnchor *anchor in anchors) {
-//        removeAnchor(anchor, (ARView *)self.view);
-//    }
+    for (ARAnchor *anchor in anchors) {
+        removeAnchor(anchor, (ARView *)self.view);
+    }
 }
 
 @end

@@ -13,6 +13,7 @@ func makeARViewWithSession(_ session: ARSession) -> ARView {
     let arView: ARView = .init(frame: .null)
     arView.automaticallyConfigureSession = false
     arView.session = session
+    arView.debugOptions = [.showAnchorGeometry, .showAnchorOrigins, .showFeaturePoints, .showPhysics, .showSceneUnderstanding, .showWorldOrigin]
     
     return arView
 }
